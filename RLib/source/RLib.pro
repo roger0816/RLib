@@ -25,8 +25,8 @@ linux-arm-gnueabi {
     OS=Embedded
 }
 
-#OS=Linux
-OS=Embedded
+OS=Linux
+#OS=Embedded
 }
 mac:!macx{
 OS=Ios
