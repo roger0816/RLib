@@ -1,1 +1,7 @@
 build
+/RLib/source/Makefile.Debug
+/RLib/source/Makefile.Release
+/RLib/source/object_script.libRLibQt5Win.Debug
+/RLib/source/object_script.libRLibQt5Win.Release
+/RLib/source/debug
+/RLib/source/release
