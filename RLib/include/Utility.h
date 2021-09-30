@@ -10,6 +10,7 @@
 #include <QTime>
 #include <QCoreApplication>
 #include <QPoint>
+#include <QFile>
 
 struct CData
 {
@@ -40,13 +41,19 @@ public:
 
     void sleep(unsigned int msec);
 
-    void aniMove(QObject *obj, QPoint pStart,QPoint pEnd, int iMsec=200);
+//    void aniMove(QObject *obj, QPoint pStart,QPoint pEnd, int iMsec=200);
 
-    void aniMove(QObject *obj, QPoint pEnd, int iMsec=200);
+//    void aniMove(QObject *obj, QPoint pEnd, int iMsec=200);
 
     void setTranslatroFiles(QStringList list);
 
     void reloadTranslator(int i=-1);
+
+    QByteArray readFile(const QString &fileName);
+
+    bool writeFile(const QString &fileName, const QByteArray &dat);
+
+
 
 private:
     QPropertyAnimation m_ani;

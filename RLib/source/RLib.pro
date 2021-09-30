@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += widgets
+#QT       += widgets
 
 #QT       += gui
 
@@ -52,9 +52,9 @@ MOC_DIR = $$PWD/obj
 UI_DIR = $$PWD/obj/ui_header
 
 
-INCLUDEPATH +=$$PWD/../include/ \
-              $$PWD/../include/ui \
-              $$PWD/../source/ui
+INCLUDEPATH +=$$PWD/../include/
+#              $$PWD/../include/ui \
+#              $$PWD/../source/ui
 
 
 
@@ -68,15 +68,18 @@ SOURCES += \
     ipc/CLocalServer.cpp \
     ipc/CLocalClient.cpp \
     utility/Utility.cpp \
-    Library.cpp \
-    ui/LayerWheel.cpp \
-    ui/LayerScrollView.cpp \
-    ui/ItemSelectNumber.cpp \
-    ui/LayerKeyborad.cpp \
-    ui/ItemLineEdit.cpp \
-    utility/GlobalBase.cpp \
-    ui/LayerBlock.cpp \
-    ui/ItemLoadingBarA.cpp
+    Library.cpp
+
+
+
+#    ui/LayerWheel.cpp \
+#    ui/LayerScrollView.cpp \
+#    ui/ItemSelectNumber.cpp \
+#    ui/LayerKeyborad.cpp \
+#    ui/ItemLineEdit.cpp \
+#    utility/GlobalBase.cpp \
+#    ui/LayerBlock.cpp \
+#    ui/ItemLoadingBarA.cpp
 
 
 
@@ -97,9 +100,9 @@ HEADERS += \
     ipc/CLocalClient.h
 
 
-FORMS += \
-    ui/LayerKeyborad.ui \
-    ui/LayerBlock.ui
+#FORMS += \
+#    ui/LayerKeyborad.ui \
+#    ui/LayerBlock.ui
 
 
 

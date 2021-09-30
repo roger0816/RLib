@@ -3,7 +3,7 @@
 #include <QSettings>
 #include <QDebug>
 #include <QDate>
-#include <QWidget>
+
 
 #define EL_L "::"
 #define EL_M ";;"
@@ -175,41 +175,41 @@ void Utility::sleep(unsigned int msec)
 
 }
 
-void Utility::aniMove(QObject *obj, QPoint pStart, QPoint pEnd, int iMsec)
-{
-    if(!obj || obj ==0 || obj == NULL)
-    {
-        qDebug()<<"insert null point ??";
+//void Utility::aniMove(QObject *obj, QPoint pStart, QPoint pEnd, int iMsec)
+//{
+//    if(!obj || obj ==0 || obj == NULL)
+//    {
+//        qDebug()<<"insert null point ??";
 
-        return ;
-    }
+//        return ;
+//    }
 
-    if(pStart==QPoint(999,999))
-        pStart=dynamic_cast<QWidget*>(obj)->pos();
+//    if(pStart==QPoint(999,999))
+//        pStart=dynamic_cast<QWidget*>(obj)->pos();
 
-    m_ani.setTargetObject(obj);
+//    m_ani.setTargetObject(obj);
 
-    m_ani.setPropertyName("pos");
+//    m_ani.setPropertyName("pos");
 
-    m_ani.setDuration(iMsec);
+//    m_ani.setDuration(iMsec);
 
-    m_ani.setStartValue(pStart);
+//    m_ani.setStartValue(pStart);
 
-    m_ani.setEndValue(pEnd);
+//    m_ani.setEndValue(pEnd);
 
-    m_eventLoop.connect(&m_ani,SIGNAL(finished()),&m_eventLoop,SLOT(quit()));
+//    m_eventLoop.connect(&m_ani,SIGNAL(finished()),&m_eventLoop,SLOT(quit()));
 
-    m_ani.start();
+//    m_ani.start();
 
-    m_eventLoop.exec();
+//    m_eventLoop.exec();
 
-    m_eventLoop.disconnect();
-}
+//    m_eventLoop.disconnect();
+//}
 
-void Utility::aniMove(QObject *obj, QPoint pEnd, int iMsec)
-{
-    aniMove(obj,dynamic_cast<QWidget*>(obj)->pos(),pEnd,iMsec);
-}
+//void Utility::aniMove(QObject *obj, QPoint pEnd, int iMsec)
+//{
+//    aniMove(obj,dynamic_cast<QWidget*>(obj)->pos(),pEnd,iMsec);
+//}
 
 void Utility::setTranslatroFiles(QStringList list)
 {
@@ -237,4 +237,45 @@ void Utility::reloadTranslator(int i)
     qApp->installTranslator(&m_translator);
 
     emit signalChangeLanguage(i);
+}
+
+QByteArray Utility::readFile(const QString &fileName)
+{
+
+        QByteArray rslt;
+
+        QFile f(fileName);
+        if (!f.open(QFile::ReadOnly))
+        {
+            qDebug("open file failed! fileName:%s", fileName.toUtf8().constData());
+            return rslt;
+        }
+
+        rslt = f.readAll();
+        return rslt;
+
+
+}
+
+bool Utility::writeFile(const QString &fileName, const QByteArray &dat)
+{
+    QFile f(fileName);
+    if (!f.open(QFile::WriteOnly | QFile::Truncate))
+    {
+        qDebug("open file failed! fileName:%s", fileName.toUtf8().constData());
+        return false;
+    }
+
+    int n = f.write(dat);
+    if (n != dat.length())
+    {
+        qDebug("write file failed! fileName:%s", fileName.toUtf8().constData());
+        return false;
+    }
+
+    bool result = f.flush();
+
+//    fsync(f.handle());
+    f.close();
+    return result;
 }

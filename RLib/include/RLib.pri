@@ -28,7 +28,7 @@ OS=Android
 
 
 
-DESTDIR = $$PWD/../bin/
+#DESTDIR = $$PWD/../bin/
 MOC_DIR = $$PWD/../build/moc/
 OBJECTS_DIR = $$PWD/../build/obj/
 RCC_DIR = $$PWD/../build/rc/
@@ -57,16 +57,17 @@ HEADERS += \
     $$PWD/DataBase.h \
     $$PWD/Ipc.h \
     $$PWD/Utility.h \
-    $$PWD/Library.h \
-    $$PWD/Ui.h \
-    $$PWD/ui/LayerWheel.h \
-    $$PWD/ui/LayerScrollView.h \
-    $$PWD/ui/ItemSelectNumber.h \
-    $$PWD/ui/LayerKeyborad.h \
-    $$PWD/ui/ItemLineEdit.h \
-    $$PWD/GlobalBase.h \
-    $$PWD/ui/LayerBlock.h \
-    $$PWD/ui/ItemLoadingBarA.h
+    $$PWD/Library.h
+
+#    $$PWD/Ui.h \
+#    $$PWD/ui/LayerWheel.h \
+#    $$PWD/ui/LayerScrollView.h \
+#    $$PWD/ui/ItemSelectNumber.h \
+#    $$PWD/ui/LayerKeyborad.h \
+#    $$PWD/ui/ItemLineEdit.h \
+#    $$PWD/GlobalBase.h \
+#    $$PWD/ui/LayerBlock.h \
+#    $$PWD/ui/ItemLoadingBarA.h
 
 RESOURCES += \
     $$PWD/res/res.qrc
