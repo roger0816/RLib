@@ -3,41 +3,39 @@ QT       += network sql testlib
 
 
 
-#win32{
-#OS=Win
+win32{
+OS=Win
 
-#}
-#unix:!macx{
+}
+unix:!macx{
 
-##linux-arm-gnueabi {
-##    //ARM stuff here
-##}
-
-#OS=Linux
-#}
-#mac:!macx{
-#OS=Ios
-#}
-#macx{
-#QMAKE_MAC_SDK = macosx10.12
-#OS=Osx
-#}
-#android{
-#OS=Android
+#linux-arm-gnueabi {
+#    //ARM stuff here
 #}
 
+OS=Linux
+}
+mac:!macx{
+OS=Ios
+}
+macx{
+QMAKE_MAC_SDK = macosx10.12
+OS=Osx
+}
+android{
+OS=Android
+}
 
 
-#MOC_DIR = $$PWD/../build/moc/
-#OBJECTS_DIR = $$PWD/../build/obj/
-#RCC_DIR = $$PWD/../build/rc/
-#UI_DIR = $$PWD/../build/ui/
+
+DESTDIR = $$PWD/../bin/
+MOC_DIR = $$PWD/../build/moc/
+OBJECTS_DIR = $$PWD/../build/obj/
+RCC_DIR = $$PWD/../build/rc/
+UI_DIR = $$PWD/../build/ui/
 
 
-#DESTDIR = $$PWD/../bin/
-
-
-#RLIB=libRLibQt$$QT_MAJOR_VERSION$${OS}.a
+RLIB=libRLibQt$$QT_MAJOR_VERSION$${OS}.a
 
 
 #Use EX
@@ -60,7 +58,6 @@ HEADERS += \
     $$PWD/Ipc.h \
     $$PWD/Utility.h \
     $$PWD/Library.h
-
 #    $$PWD/Ui.h \
 #    $$PWD/ui/LayerWheel.h \
 #    $$PWD/ui/LayerScrollView.h \

@@ -5,3 +5,6 @@ build
 /RLib/source/object_script.libRLibQt5Win.Release
 /RLib/source/debug
 /RLib/source/release
+obj
+/RLib/source/*.user
+/RLib/source/*.user.*

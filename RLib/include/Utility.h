@@ -10,7 +10,6 @@
 #include <QTime>
 #include <QCoreApplication>
 #include <QPoint>
-#include <QFile>
 
 struct CData
 {
@@ -48,12 +47,6 @@ public:
     void setTranslatroFiles(QStringList list);
 
     void reloadTranslator(int i=-1);
-
-    QByteArray readFile(const QString &fileName);
-
-    bool writeFile(const QString &fileName, const QByteArray &dat);
-
-
 
 private:
     QPropertyAnimation m_ani;

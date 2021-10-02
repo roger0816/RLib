@@ -1,7 +1,6 @@
 ﻿#ifndef LAYERSCROLLVIEW_H
 #define LAYERSCROLLVIEW_H
 
-#include <QWidget>
 #include <QMouseEvent>
 #include <QResizeEvent>
 #include <QCoreApplication>

@@ -53,8 +53,7 @@ UI_DIR = $$PWD/obj/ui_header
 
 
 INCLUDEPATH +=$$PWD/../include/
-#              $$PWD/../include/ui \
-#              $$PWD/../source/ui
+
 
 
 
@@ -69,9 +68,6 @@ SOURCES += \
     ipc/CLocalClient.cpp \
     utility/Utility.cpp \
     Library.cpp
-
-
-
 #    ui/LayerWheel.cpp \
 #    ui/LayerScrollView.cpp \
 #    ui/ItemSelectNumber.cpp \

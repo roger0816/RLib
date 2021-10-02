@@ -267,6 +267,7 @@ Makefile: RLib.pro W:/Qt/windows/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf 
 		W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/testlib_defines.prf \
 		W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/win32/console.prf \
 		W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/win32/opengl.prf \
+		W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/uic.prf \
 		W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/qmake_use.prf \
 		W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/file_copies.prf \
 		W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/testcase_targets.prf \
@@ -274,6 +275,7 @@ Makefile: RLib.pro W:/Qt/windows/5.15.2/mingw81_64/mkspecs/win32-g++/qmake.conf 
 		W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/yacc.prf \
 		W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/lex.prf \
 		RLib.pro \
+		W:/Qt/windows/5.15.2/mingw81_64/lib/Qt5Widgets.prl \
 		W:/Qt/windows/5.15.2/mingw81_64/lib/Qt5Gui.prl \
 		W:/Qt/windows/5.15.2/mingw81_64/lib/Qt5Network.prl \
 		W:/Qt/windows/5.15.2/mingw81_64/lib/Qt5Sql.prl \
@@ -479,6 +481,7 @@ W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/moc.prf:
 W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/testlib_defines.prf:
 W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/win32/console.prf:
 W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/win32/opengl.prf:
+W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/uic.prf:
 W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/qmake_use.prf:
 W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/file_copies.prf:
 W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/testcase_targets.prf:
@@ -486,6 +489,7 @@ W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/exceptions.prf:
 W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/yacc.prf:
 W:/Qt/windows/5.15.2/mingw81_64/mkspecs/features/lex.prf:
 RLib.pro:
+W:/Qt/windows/5.15.2/mingw81_64/lib/Qt5Widgets.prl:
 W:/Qt/windows/5.15.2/mingw81_64/lib/Qt5Gui.prl:
 W:/Qt/windows/5.15.2/mingw81_64/lib/Qt5Network.prl:
 W:/Qt/windows/5.15.2/mingw81_64/lib/Qt5Sql.prl:

@@ -4,7 +4,6 @@
 #include <QDebug>
 #include <QDate>
 
-
 #define EL_L "::"
 #define EL_M ";;"
 #define EL_S ",,"
@@ -237,45 +236,4 @@ void Utility::reloadTranslator(int i)
     qApp->installTranslator(&m_translator);
 
     emit signalChangeLanguage(i);
-}
-
-QByteArray Utility::readFile(const QString &fileName)
-{
-
-        QByteArray rslt;
-
-        QFile f(fileName);
-        if (!f.open(QFile::ReadOnly))
-        {
-            qDebug("open file failed! fileName:%s", fileName.toUtf8().constData());
-            return rslt;
-        }
-
-        rslt = f.readAll();
-        return rslt;
-
-
-}
-
-bool Utility::writeFile(const QString &fileName, const QByteArray &dat)
-{
-    QFile f(fileName);
-    if (!f.open(QFile::WriteOnly | QFile::Truncate))
-    {
-        qDebug("open file failed! fileName:%s", fileName.toUtf8().constData());
-        return false;
-    }
-
-    int n = f.write(dat);
-    if (n != dat.length())
-    {
-        qDebug("write file failed! fileName:%s", fileName.toUtf8().constData());
-        return false;
-    }
-
-    bool result = f.flush();
-
-//    fsync(f.handle());
-    f.close();
-    return result;
 }
