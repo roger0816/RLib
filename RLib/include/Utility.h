@@ -10,6 +10,7 @@
 #include <QTime>
 #include <QCoreApplication>
 #include <QPoint>
+#include <QFile>
 
 struct CData
 {
@@ -39,6 +40,10 @@ public:
     int checkLogin(QString sUser,QString sPassWord);
 
     void sleep(unsigned int msec);
+
+    QByteArray readFile(const QString &fileName);
+
+    bool writeFile(const QString &fileName, const QByteArray &dat);
 
 //    void aniMove(QObject *obj, QPoint pStart,QPoint pEnd, int iMsec=200);
 

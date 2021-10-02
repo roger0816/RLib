@@ -28,7 +28,7 @@ OS=Android
 
 
 
-DESTDIR = $$PWD/../bin/
+#DESTDIR = $$PWD/../bin/
 MOC_DIR = $$PWD/../build/moc/
 OBJECTS_DIR = $$PWD/../build/obj/
 RCC_DIR = $$PWD/../build/rc/
